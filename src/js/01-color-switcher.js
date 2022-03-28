@@ -15,11 +15,13 @@ startBtn.addEventListener("click", () => {
         bodyColor.style.backgroundColor = getRandomHexColor();    
     }, 1000);
     startBtnIsActive = true;
+    startBtn.setAttribute('disabled', true);
 });
 
 stopBtn.addEventListener("click", () => {
     startBtnIsActive = false;
     clearInterval(timerId);
+    startBtn.removeAttribute('disabled');
 });
 
 

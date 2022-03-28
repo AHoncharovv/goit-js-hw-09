@@ -2,6 +2,11 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 const timerInput = document.querySelector("#datetime-picker");
 const timerField = document.querySelector("div.timer");
+const inputBtn = document.querySelector("button");
+const input = document.querySelector("input");
+
+
+
 timerField.style.display = "flex";
 timerField.style.justifyContent = "space-evenly";
 
@@ -63,6 +68,9 @@ timerBtn.addEventListener('click', () => {
 
 
     startBtnIsActive = true; 
+    inputBtn.setAttribute('disabled', true);
+    input.setAttribute('disabled', true);
+    
 });
 
 function convertMs(ms) {
